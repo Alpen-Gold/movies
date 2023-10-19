@@ -61,7 +61,6 @@ let Movie = () => {
     };
 
     setSelectedMovie(updatedMovie);
-
     await api.put(`/kinolar/${selectedMovie.id}`, updatedMovie);
 
     queryClient.invalidateQueries("movies");
